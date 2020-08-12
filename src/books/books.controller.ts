@@ -28,6 +28,7 @@ export class BooksController {
 
   @Post()
   async addBook(@Body() createBookDTO: CreateBookDTO) {
+    console.log(createBookDTO);
     const book = await this.booksService.addBook(createBookDTO);
     return book;
   }
